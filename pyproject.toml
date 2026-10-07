@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "udaplay"
+version = "0.1.0"
+description = "UdaPlay: an agentic AI assistant that answers video game questions from a local dataset, falling back to web search."
+readme = "Scenario_and_Spec.md"
+requires-python = ">=3.14"
+dependencies = [
+    "chromadb~=1.5.9",
+    "openai~=3.26.0",
+    "pydantic~=2.13.5",
+    "python-dotenv~=1.2.4",
+    "tavily-python~=0.8.5",
+    "pdfplumber~=0.11.10",
+    "ipython~=8.15.0",
+]
+
+# Notebook-only project: nothing to package, just install the dependencies.
+[tool.setuptools]
+py-modules = []
